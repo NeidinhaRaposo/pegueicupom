@@ -1,13 +1,20 @@
 #====================================================== BIBLIOTECAS ==================================================
 
 from flask import Flask, render_template, jsonify, json
-import _sqlite3 as db
+import sqlite3
 import os
 
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-# UPLOAD_FOLDER = os.path.join(BASE_DIR, 'uploads')
+DB_PACK = os.path.join('rh_database.db')
+
+# ==================================================== Banco de Dados =================================================
+
+def criar_banco():
+    conec = sqlite3.connect(DB_PACK)
+    conec.row_factory = sqlite3.Row
+    return conec
 
 # ==================================================== Front-End =====================================================
 @app.route('/')
