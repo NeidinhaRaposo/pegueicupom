@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Loja - PegueiCupom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <main class="pagina-admin">
+
+        <h1>Cadastrar Loja</h1>
+
+        <p>Adicione empresas parceiras ao PegueiCupom.</p>
+
+        <form action="/lojas" method="POST">
+
+            <label for="nome">Nome da loja:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Academia Vida Fit" required>
+
+            <label for="site">Site da loja:</label>
+            <input type="text" id="site" name="site" placeholder="Ex: https://www.lojax.com.br">
+
+            <label for="logo">Logo da loja:</label>
+            <input type="text" id="logo" name="logo" placeholder="Ex: logo-academia.png">
+
+            <button type="submit">Salvar Loja</button>
+
+        </form>
+
+        <hr>
+
+        <h2>Lojas cadastradas</h2>
+
+        {% if lojas %}
+            <ul>
+                {% for loja in lojas %}
+                    <li>
+                        <strong>{{ loja["nome"] }}</strong><br>
+                        Site: {{ loja["site"] }}<br>
+                        Logo: {{ loja["logo"] }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma loja cadastrada ainda.</p>
+        {% endif %}
+
+        <br>
+
+        <a href="/dashboard">Voltar para o painel</a>
+
+    </main>
+
+</body>
+</html>

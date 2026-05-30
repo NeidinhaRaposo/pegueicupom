@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo - PegueiCupom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <main class="dashboard-container">
+        <h1>Painel Administrativo</h1>
+        <p>Gerencie lojas, cupons e usuários do PegueiCupom.</p>
+
+        <div class="dashboard-cards">
+            <a href="/lojas" class="dashboard-card">
+                <h2>Cadastrar Loja</h2>
+                <p>Adicione empresas parceiras ao sistema.</p>
+            </a>
+
+            <a href="/cupons" class="dashboard-card">
+                <h2>Cadastrar Cupom</h2>
+                <p>Crie cupons vinculados às lojas cadastradas.</p>
+            </a>
+
+            <a href="/" class="dashboard-card">
+                <h2>Ver Site</h2>
+                <p>Voltar para a página inicial.</p>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>

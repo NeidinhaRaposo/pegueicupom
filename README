@@ -1,11 +1,170 @@
-Bibliotecas que serão utilizadas no python:
-    
-    PyDantic
-    Pandas
-    Flask
-    QRCode
+# 🎟️ PegueiCupom
 
-OBS: Essas bibliotecas estão em fase de teste, logo mais abaixo deste documento sera explicado 
+## 📌 Sobre o Projeto
 
+O PegueiCupom é uma plataforma web desenvolvida para divulgar cupons de desconto em serviços locais, conectando empresas e clientes de forma simples, rápida e organizada.
 
-Nomes das variaveis e as funções delas:
+O objetivo do sistema é permitir que empresas parceiras cadastrem promoções e ofertas, enquanto os usuários encontram descontos próximos à sua região.
+
+O projeto está sendo desenvolvido com foco em aprendizado, organização de código, banco de dados e desenvolvimento web utilizando Python e Flask.
+
+---
+
+# 🚀 Tecnologias Utilizadas
+
+* Python 3
+* Flask
+* SQLite
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub
+
+---
+
+# 📂 Estrutura do Projeto
+
+```text
+pegueicupom
+│
+├── database
+│   └── pegueicupom.db
+│
+├── static
+│   ├── css
+│   │   └── style.css
+│   │
+│   ├── js
+│   │   └── script.js
+│   │
+│   └── img
+│
+├── templates
+│   ├── cadastro.html
+│   ├── cupons.html
+│   ├── dashboard.html
+│   ├── index.html
+│   ├── login-comum.html
+│   ├── lojas.html
+│   └── perfil.html
+│
+├── app.py
+└── README.md
+```
+
+---
+
+# ⚙️ Funcionalidades Implementadas
+
+## Sistema
+
+* Banco de dados SQLite
+* Criação automática das tabelas
+* Estrutura organizada em pastas
+* Rotas Flask configuradas
+
+## Front-End
+
+* Página inicial
+* Login de usuário
+* Cadastro de usuário
+* Perfil de usuário
+* Dashboard administrativo
+
+## Administração
+
+* Cadastro de lojas
+* Listagem de lojas cadastradas
+* Integração com banco de dados
+
+---
+
+# 🗄️ Banco de Dados
+
+Atualmente o sistema possui as seguintes tabelas:
+
+## Usuários
+
+* id
+* nome
+* email
+* senha
+* tipo
+
+## Lojas
+
+* id
+* nome
+* site
+* logo
+
+## Cupons
+
+* id
+* codigo
+* descricao
+* desconto
+* validade
+* loja_id
+
+---
+
+# 🔄 Funcionalidades em Desenvolvimento
+
+* Cadastro de cupons
+* Associação de cupons às lojas
+* Exibição dos cupons na página inicial
+* Área exclusiva para empresas
+* Sistema de autenticação
+* Busca por cidade
+* Upload de imagens e logotipos
+* Painel administrativo completo
+
+---
+
+# ▶️ Como Executar
+
+## Instalar dependências
+
+```bash
+pip install flask
+```
+
+## Executar o projeto
+
+```bash
+python app.py
+```
+
+## Abrir no navegador
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# 🎯 Objetivo do Projeto
+
+Este projeto foi criado para praticar:
+
+* Desenvolvimento Web
+* Python
+* Flask
+* Banco de Dados SQLite
+* HTML
+* CSS
+* JavaScript
+* Git e GitHub
+* Organização de projetos profissionais
+
+---
+
+# 👩‍💻 Desenvolvedores
+
+Neidiman Raposo
+Thiago Borba
+
+Projeto desenvolvido para aprendizado, prática de desenvolvimento web e composição de portfólio profissional.
+
